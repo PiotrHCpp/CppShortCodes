@@ -1,4 +1,5 @@
 #include <iostream>
+#include <assert.h>
 
 bool isPalindrome(const std::string & text)
 {
@@ -12,9 +13,22 @@ bool isPalindrome(const std::string & text)
     return true;
 }
 
+
 int main()
 {
-    std::string input{"kajak"};
-    std::cout << std::boolalpha << isPalindrome(input) << std::endl;
+    std::string input1{""}, input2{" "}, input3{"a"};
+    std::string input4{"ana"}, input5{"kayak"}, input6{"repaper"};
+    std::string input7{"bed"}, input8{"jump"}, input9{"flight"};
+
+    assert(isPalindrome(input1) == false);
+    assert(isPalindrome(input2) == true);
+    assert(isPalindrome(input3) == true);
+    assert(isPalindrome(input4) == true);
+    assert(isPalindrome(input5) == true);
+    assert(isPalindrome(input6) == true);
+    assert(isPalindrome(input7) == false);
+    assert(isPalindrome(input8) == false);
+    assert(isPalindrome(input9) == false);
+
     return 0;
 }
