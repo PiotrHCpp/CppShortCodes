@@ -13,7 +13,6 @@ bool isPalindrome(const std::string & text)
     return true;
 }
 
-
 int main()
 {
     std::string input1{""}, input2{" "}, input3{"a"};
